@@ -1,20 +1,20 @@
 console.log('react '+React)
 console.log('react-dom ' + ReactDOM)
 
-var headerComponent = React.createClass({
+var HeaderComponent = React.createClass({
   render: function(){
             return React.createElement('nav', {style: {border: "1px solid blue"}},
             	React.createElement('h1', {style: {color: 'red', textAlign:'center'}}, 'Heather Walker'),
               	React.createElement('ul', null,
-                React.createElement(listItemComponent,{name:"family"}),
-                React.createElement(listItemComponent,{name:"education"}),
-                React.createElement(listItemComponent,{name:"hobbies"})
+                React.createElement(ListItemComponent,{name:"family"}),
+                React.createElement(ListItemComponent,{name:"education"}),
+                React.createElement(ListItemComponent,{name:"hobbies"})
               )
             )
           }
 });
 
-var listItemComponent = React.createClass({
+var ListItemComponent = React.createClass({
   render: function(){
             return React.createElement('li', null,
               React.createElement('a', {href: this.props.link}, this.props.name)
@@ -22,7 +22,7 @@ var listItemComponent = React.createClass({
           }
 });
 
-var footerComponent = React.createClass({
+var FooterComponent = React.createClass({
   render: function(){
             return React.createElement('div', null,
               React.createElement('p', null, 'heather@gmail.com')
@@ -30,7 +30,7 @@ var footerComponent = React.createClass({
           }
 });
 
-var mainContentComponent = React.createClass({
+var MainContentComponent = React.createClass({
   render: function(){
             return React.createElement('div', {style: {display: 'inline-block', verticalAlign: 'top', margin: "10px", padding:'15px', border: "1px solid green", width: '700px'}},
               React.createElement('h1', null, "Family"),
@@ -46,13 +46,13 @@ var mainContentComponent = React.createClass({
           }
 });
 
-var sidebarComponent = React.createClass({
+var SidebarComponent = React.createClass({
   render: function(){
             return React.createElement('div', {style: {display: 'inline-block', width: "300px", margin: "10px", padding:'15px', border: "1px solid purple"}},
               React.createElement('h1', null, "Sidebar Headline"),
-              React.createElement(listItemComponent, {name: "Link to Favorite Website", link:'https://disneyland.disney.go.com/'}),
-              React.createElement(listItemComponent, {name: "Link to LinkedIn", link: 'https://www.linkedin.com/in/heatherwalker3'}),
-              React.createElement(listItemComponent, {name: "Link to Portfolio", link: 'http://heatherwalker.ladle.net'})
+              React.createElement(ListItemComponent, {name: "Link to Favorite Website", link:'https://disneyland.disney.go.com/'}),
+              React.createElement(ListItemComponent, {name: "Link to LinkedIn", link: 'https://www.linkedin.com/in/heatherwalker3'}),
+              React.createElement(ListItemComponent, {name: "Link to Portfolio", link: 'http://heatherwalker.ladle.net'})
             )
           }
 });
@@ -60,12 +60,12 @@ var sidebarComponent = React.createClass({
 var FakeBlog = React.createClass({
   render: function(){
             return React.createElement('div', null,
-              React.createElement(headerComponent),
-              React.createElement(sidebarComponent),
-              React.createElement(mainContentComponent),
+              React.createElement(HeaderComponent),
+              React.createElement(SidebarComponent),
+              React.createElement(MainContentComponent),
               React.createElement('footer', {style :{border: "1px solid black", textAlign: "center", padding: "15px"}},
                 "©2016",
-                React.createElement(footerComponent)
+                React.createElement(FooterComponent)
               )
             )
           }
