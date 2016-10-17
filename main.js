@@ -1,51 +1,6 @@
 console.log('react '+React)
 console.log('react-dom ' + ReactDOM)
 
-// var images = [
-// 	'https://1.bp.blogspot.com/-HKg5rOp9K7Q/VgiBUGO1PJI/AAAAAAAGBAA/PPODRBlI63s/s320/smiling-wedding-couple2.png',
-	// 'http://www.apartmentlisting411.com/images/A-List-Of-The-Smartest-Breeds-Of-Dogs.jpg'
-
-// ]
-
-// var headerComponent = React.createClass({
-// 	render: function(){
-// 		return React.createElement('nav', {style: {border: '2px solid blue'}},
-// 			React.createElement('ul', null,
-// 				React.createElement(listItemComponent, {item: 'Education'}),
-// 				React.createElement(listItemComponent, {item: 'Family'})
-// 			)
-// 		)
-// 	}
-// });
-
-// var listItemComponent = React.createClass({
-// 	render: function(){
-// 		return React.createElement('li', {style: {color: 'red'}}, 
-// 			React.createElement('a', {href: ''}, this.props.item )
-// 		)
-// 	}
-// });
-
-// var mainContentComponent = React.createElement('div', null,
-// 	React.createElement('h1', {style: {color: 'blue'}}, 'Main Content Heading'),
-// 	React.createElement('p', null, 'main content paragraph'),
-	// React.createElement('img', {src: 'http://images.clipartpanda.com/clipart-family-clip-art-pictures-family.jpg', alt: 'picture of family'})
-// );
-
-// var blog = React.createClass({
-// 	render: function(){
-// 		return React.createElement('div', null,
-// 			React.createElement(Header),
-// 			React.createElement(mainContentComponent)
-// 		)
-// 	}
-// });
-// var actualDOMNode = document.getElementById('app');
-
-// ReactDOM.render(mainContentComponent, actualDOMNode);
-// ReactDOM.render(blog, actualDOMNode);
-
-
 var headerComponent = React.createClass({
   render: function(){
             return React.createElement('nav', {style: {border: "1px solid blue"}},
