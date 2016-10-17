@@ -62,7 +62,7 @@ var headerComponent = React.createClass({
 var listItemComponent = React.createClass({
   render: function(){
             return React.createElement('li', null,
-              React.createElement('a', {href:''}, this.props.name)
+              React.createElement('a', {href: this.props.link}, this.props.name)
             )
           }
 });
@@ -95,9 +95,9 @@ var sidebarComponent = React.createClass({
   render: function(){
             return React.createElement('div', {style: {display: 'inline-block', width: "300px", margin: "10px", padding:'15px', border: "1px solid purple"}},
               React.createElement('h1', null, "Sidebar Headline"),
-              React.createElement(listItemComponent, {name: "Link to Favorite Website"}),
-              React.createElement(listItemComponent, {name: "Link to LinkedIn"}),
-              React.createElement(listItemComponent, {name: "Link to Portfolio"})
+              React.createElement(listItemComponent, {name: "Link to Favorite Website", link:'https://disneyland.disney.go.com/'}),
+              React.createElement(listItemComponent, {name: "Link to LinkedIn", link: 'https://www.linkedin.com/in/heatherwalker3'}),
+              React.createElement(listItemComponent, {name: "Link to Portfolio", link: 'http://heatherwalker.ladle.net'})
             )
           }
 });
