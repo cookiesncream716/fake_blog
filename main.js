@@ -1,5 +1,6 @@
-console.log('react '+React)
-console.log('react-dom ' + ReactDOM)
+console.log('react '+React);
+console.log('react-dom ' + ReactDOM);
+console.log('hello world');
 
 var HeaderComponent = React.createClass({
   render: function(){
