@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 console.log('react '+React);
 console.log('react-dom ' + ReactDOM);
 console.log('hello world');
@@ -34,11 +37,14 @@ var FooterComponent = React.createClass({
 var MainContentComponent = React.createClass({
   render: function(){
             return React.createElement('div', {style: {display: 'inline-block', verticalAlign: 'top', margin: "10px", padding:'15px', border: "1px solid green", width: '700px'}},
-              React.createElement('h1', null, "Family"),
-              React.createElement('p', null, "Married with 2 boys."),
+              // React.createElement('h1', null, "Family"),
+              <h1>Family</h1>,
+              <p>Married with 2 boys.</p>,
               React.createElement('img', {src: 'http://images.clipartpanda.com/clipart-family-clip-art-pictures-family.jpg', alt: 'picture of family', style: {width: '200px'}}),
-              React.createElement('h2', null, 'Education'),
-              React.createElement('p', null, 'Most recently went to Coding Dojo'),
+              // React.createElement('h2', null, 'Education'),
+              // React.createElement('p', null, 'Most recently went to Coding Dojo'),
+              <h2>Education</h2>,
+              <p>Most recently graduated from Coding Dojo</p>,
               React.createElement('img', {src: 'http://www.codingdojo.com/blog/wp-content/uploads/coding_dojo_logo_black.png', alt: 'Coding Dojo logo', style: {width: '200px'}}),
               React.createElement('h3', null, 'Pets'),
               React.createElement('p', null, 'Currently has 1 dog'),
@@ -73,5 +79,6 @@ var FakeBlog = React.createClass({
 });
 
 // Next use ReactDOM.render() to place the element to a location in the DOM.
-ReactDOM.render(React.createElement(FakeBlog), document.getElementById('app'));
+// ReactDOM.render(React.createElement(FakeBlog), document.getElementById('app'));
+ReactDOM.render(<FakeBlog />, document.getElementById('app'));
 
